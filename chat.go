@@ -383,6 +383,9 @@ type ChatCompletionResponse struct {
 	SystemFingerprint   string                 `json:"system_fingerprint"`
 	PromptFilterResults []PromptFilterResult   `json:"prompt_filter_results,omitempty"`
 
+	// This field is not an official OpenAI field, only useful for perplexity sonar model.
+	Citations []string `json:"citations,omitempty"`
+
 	httpHeader
 }
 

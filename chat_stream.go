@@ -63,6 +63,8 @@ type ChatCompletionStreamResponse struct {
 	// When present, it contains a null value except for the last chunk which contains the token usage statistics
 	// for the entire request.
 	Usage *Usage `json:"usage,omitempty"`
+	// This field is not an official OpenAI field, only useful for perplexity sonar model.
+	Citations []string `json:"citations,omitempty"`
 }
 
 // ChatCompletionStream
